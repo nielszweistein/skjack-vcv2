@@ -1,4 +1,4 @@
-project('SkJack', 'c', 'cpp', version: '0.6.0')
+project('SkJack', 'c', 'cpp', version: '2.0.6')
 
 slug = 'SkJack'
 
@@ -15,6 +15,7 @@ add_project_link_arguments(['-ldl'], language: 'cpp')
 rack_include = include_directories('/opt/rack/include')
 
 shared_module('plugin', [
+'src/hashids.cc',
 'src/jack-audio-module.cc',
 'src/jack-audio-module-widget.cc',
 'src/skjack.cc',
